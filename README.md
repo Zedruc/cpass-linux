@@ -5,10 +5,19 @@ A command-line password generator written in C. Uses `getrandom(2)` for cryptogr
 ## Building
 
 ```sh
-make
+make        # production build (-O2)
+make dev    # debug build (-g -O0)
 ```
 
 Requires GCC and a Linux system (uses `getrandom` syscall).
+
+### Installation
+
+```sh
+sudo make install            # installs to /usr/local/bin
+make install PREFIX=~/.local # installs to ~/.local/bin
+sudo make uninstall          # removes installed binary
+```
 
 ## Usage
 
